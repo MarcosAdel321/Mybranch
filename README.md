@@ -11,7 +11,7 @@ dotnet restore
 dotnet run
 ```
 
-The app creates `tasktracker.db` in its working directory. Open the URL printed by `dotnet run` and use `/api/tasks`.
+The app creates `tasktracker.db` in its working directory. Open the URL printed by `dotnet run` and use `/api/tasks`. The `TaskTracker.Api.http` file contains example requests for listing, creating, updating, and deleting tasks; it can be run from a compatible editor after updating its host address if needed.
 
 ## Endpoints
 
@@ -41,3 +41,7 @@ Example create request:
 - `AsNoTracking` is used for read-only queries.
 
 This is a learning/portfolio sample, not a production template. A production API may need authentication, authorization, migrations, structured logging, pagination, and automated tests depending on its requirements.
+
+## Build check
+
+GitHub Actions runs a restore and Release build when changes are pushed to `main` or a pull request targets `main`.
