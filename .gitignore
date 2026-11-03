@@ -1,0 +1,17 @@
+# .NET build output
+**/bin/
+**/obj/
+*.user
+*.suo
+
+# Local SQLite database
+*.db
+*.db-shm
+*.db-wal
+
+# Local editor and OS files
+.vs/
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
