@@ -1,0 +1,32 @@
+@TaskTracker.Api_HostAddress = http://localhost:5000
+
+### Health check
+GET {{TaskTracker.Api_HostAddress}}/
+
+### List tasks
+GET {{TaskTracker.Api_HostAddress}}/api/tasks
+
+### Create a task
+POST {{TaskTracker.Api_HostAddress}}/api/tasks
+Content-Type: application/json
+
+{
+  "title": "Review API proposal",
+  "description": "Check requirements and estimate the work"
+}
+
+### Get a task by ID
+GET {{TaskTracker.Api_HostAddress}}/api/tasks/1
+
+### Update a task
+PUT {{TaskTracker.Api_HostAddress}}/api/tasks/1
+Content-Type: application/json
+
+{
+  "title": "Review API proposal",
+  "description": "Requirements checked",
+  "isComplete": true
+}
+
+### Delete a task
+DELETE {{TaskTracker.Api_HostAddress}}/api/tasks/1
